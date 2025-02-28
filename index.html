@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
+    <style>
+      .poppins {
+        font-family: "Poppins";
+      }
+    </style>
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css"
       rel="stylesheet"
@@ -12,11 +17,37 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <div>
-      <header></header>
-      <main></main>
-      <footer></footer>
+  <body class="bg-blue-50">
+    <div class="py-3 px-24 bg-transparent">
+      <header class="bg-transparent">
+        <nav
+          class="bg-white w-full p-3 flex items-center justify-between rounded-lg"
+        >
+          <div class="flex items-center">
+            <img src="assets/logo.png" alt="" />
+
+            <h3 class="px-3 poppins text-2xl">
+              <span class="text-[#00303C] font-light">Dev</span
+              ><span class="text-[#00303C] font-semibold">Board</span>
+            </h3>
+          </div>
+          <div class="flex">
+            <div
+              class="mx-5 flex items-center bg-blue-50 rounded-full py-2 px-4"
+            >
+              <img src="assets/checkbox.png" alt="" />
+              <h3 class="px-4 text-[#1E1E1E] font-extrabold poppins text-2xl">
+                23
+              </h3>
+            </div>
+            <div class="p-2 rounded-full bg-blue-50">
+              <img src="assets/theme-btn.png" alt="" />
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <main>g</main>
     </div>
   </body>
 </html>
