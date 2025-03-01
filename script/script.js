@@ -55,3 +55,15 @@ presentDay.textContent = `${shortDays[day]} ,`;
 
 const presentMonth = document.querySelector("#month");
 presentMonth.textContent = `${monthName[month]} ${date} ${year}`;
+
+const deathLine = document.querySelectorAll(".death-line");
+deathLine.forEach((el) => {
+  let randomDate = date + Math.floor(Math.random() * 10);
+  let randomMonthIndex = (month + Math.floor(Math.random() * 3)) % 12;
+  el.textContent = `${randomDate} ${monthName[randomMonthIndex]} ${year}`;
+});
+
+const blog = document.querySelector("#blog");
+blog.addEventListener("click", () => {
+  open("./blogs.html");
+});
