@@ -79,5 +79,41 @@ if (task) {
 }
 
 if (task.textContent == taskHolder) {
-  completedTask.textContent = "0";
+  completedTask.textContent = 0;
+}
+const jobeDone = document.querySelectorAll(".job-done");
+
+for (let job of jobeDone) {
+  job.addEventListener("click", (event) => {
+    event.target.disabled = true;
+    const now = new Date();
+    const hour = now.getHours();
+    const minute = now.getMinutes();
+    const seconds = now.getSeconds();
+
+    const container = event.target.closest(".contanined-item");
+    const problem = container.querySelector(".problem");
+    let title = problem.textContent;
+
+    const peragraph = document.createElement("p");
+    peragraph.textContent = `You have successfully done ${title} at ${hour}:${minute}:${seconds}`;
+    peragraph.classList.add("log-info");
+
+    const log = document.querySelector("#log");
+    log.insertBefore(peragraph, log.firstChild);
+
+    const clearHistory = document.querySelector("#clear-history");
+    clearHistory.addEventListener("click", () => {
+      peragraph.classList.add("hidden");
+    });
+
+    task.textContent--;
+    completedTask.textContent++;
+    if (task.textContent == 0) {
+      alert("You have successfully done the job");
+      alert("GOOD! All the job is done");
+    } else {
+      alert("You have successfully done the job");
+    }
+  });
 }
