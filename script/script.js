@@ -67,3 +67,17 @@ const blog = document.querySelector("#blog");
 blog.addEventListener("click", () => {
   open("./blogs.html");
 });
+const mainContainer = document.querySelector("#main-container");
+const availableJob = mainContainer.querySelectorAll(".contanined-item");
+const taskHolder = availableJob.length;
+
+const task = document.querySelector("#task");
+const completedTask = document.querySelector("#complied-task");
+
+if (task) {
+  task.textContent = taskHolder;
+}
+
+if (task.textContent == taskHolder) {
+  completedTask.textContent = "0";
+}
